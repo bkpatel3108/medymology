@@ -1,0 +1,41 @@
+<div class="row" *ngIf="newTerm != null">
+    <div class="col-md-10 col-lg-8">
+        <div class="card">
+            There were no terms matching your search.
+            <div (click)="expandNewTerm = !expandNewTerm"><a href="#">Add New Term : {{newTerm}}</a></div>
+            <div *ngIf="expandNewTerm">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Term Name" />
+                    <input class="form-control" type="text" placeholder="Term Category" />
+                    <textarea class="form-control" placeholder="Term definition"></textarea>
+                    <textarea class="form-control" placeholder="Term Information"></textarea>
+                    <textarea class="form-control" placeholder="Term History"></textarea>
+                    <button type="button" class="btn btn-default center-block" (click)="expandAddRoots = !expandAddRoots">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Map Roots to Term
+                    </button>
+                    <div *ngIf="expandAddRoots">
+                        <div style="position:relative;">
+                            <input type="text" [(ngModel)]="rootName" spellcheck="false" name="search" placeholder="Search for roots..." class="form-control typeahead searchinput"
+                                id="searchquery" (keyup)=filter() required/>
+                            <span class="tt-dropdown-menu" *ngIf="filteredList.length > 0">
+                            <div class="tt-dataset-autocomplete">
+                                <ul *ngFor="let item of filteredList">
+                                    <li>
+                                        <a (click)="select(item)">{{item}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                        </div>
+                        <ul class="list-group">
+                            <li *ngFor="let item of newTermRoots" class="list-group-item">{{item}}<button (click)="removeNewTermRoot(item)" class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-default center-block">
+                        <span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Add New Term
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

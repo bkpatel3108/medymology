@@ -1,0 +1,92 @@
+.selected {
+  background-color: #a62e5c !important;
+  color: white;
+}
+.terms {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 15em;
+}
+.terms li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: 0.3em 0.3em 0.3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.terms li.selected:hover {
+  background-color: #792e5c !important;
+  color: white;
+}
+.terms li:hover {
+  color: #a62e5c;
+  background-color: #DDD;
+  left: .1em;
+}
+.terms .text {
+  position: relative;
+  top: -3px;
+}
+.terms .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0 0.7em;
+  background-color: #a62e5c;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1.8em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+
+/*From Medemology site*/
+
+.card {
+		background: white;
+		padding: 10px 5px 5px 15px;
+		margin-bottom: 10px;
+		position: relative;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+		/*overflow: scroll;*/
+	}
+
+	.card .well {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 2px;
+	}
+
+	.card p {
+		padding: 10px 5px 0px 0px;
+	}
+
+	.cardtitle {
+		font-size: 1.25em;
+		word-wrap: break-word;
+	}
+
+	.clear {
+		display:table-cell;
+	}
+
+	.root-card {
+		background: #ffffb2;
+		padding: 5px 5px 5px 15px;
+		margin-bottom: 10px;
+		position: relative;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+	}
+
+	.root-card a:hover {
+		color: gray;
+	}

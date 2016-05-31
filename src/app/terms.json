@@ -1,0 +1,51 @@
+{
+    "data": {
+        "terms": [
+            {
+                "termId": "1",
+                "termName": "Abducens Nerve",
+                "termDefinition": "The cranial nerve responsible for 'leading' the ey..",
+                "termInfomation": "Cranial Nerve VI; Innervates the lateral rectus mu...",
+                "termHistory": "The abducens nerve or abducens nerve (the sixth cr...",
+                "category": "Neurology",
+                "roots":  [
+                        {
+                            "rootId": "1",
+                            "rootName": "Ab",
+                            "rootLanguage": "Latin",
+                            "rootDefinition": "Away From"
+                        },
+                        {
+                            "rootId": "2",
+                            "rootName": "Ducere",
+                            "rootLanguage": "Latin",
+                            "rootDefinition": "To Lead"
+                        }
+                    ]
+                
+            },
+            {
+                "termId": "2",
+                "termName": "abductor digiti minimi (foot)",
+                "termDefinition": "The muscle of the foot that 'leads' the 'small' 't...",
+                "termInfomation": "Innervated by the lateral plantar nerve",
+                "termHistory": "",
+                "category": "Muscles",
+                "roots": [
+                    {
+                        "rootId": "1",
+                        "rootName": "Ab",
+                        "rootLanguage": "Latin",
+                        "rootDefinition": "Away From"
+                    },
+                    {
+                        "rootId": "2",
+                        "rootName": "Ducere",
+                        "rootLanguage": "Latin",
+                        "rootDefinition": "To Lead"
+                    }
+                ]
+            }
+        ]
+    }
+}

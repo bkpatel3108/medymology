@@ -1,0 +1,399 @@
+	* {
+	      -webkit-border-radius: 0 !important;
+	      -moz-border-radius: 0 !important;
+	      border-radius: 0 !important;
+	      margin: 0;
+	      font-family: sans-serif;
+	   }
+
+	body, h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6{
+		font-family: sans-serif;
+	}
+
+	/*h1, .h1 {
+		font-family: "Raleway";
+	}*/
+
+	body {
+		background-color:#f1f1f1;
+		margin-bottom: 0px;
+		/*padding-top: 75px;*/
+	}
+
+	.card {
+		background: white;
+		padding: 10px 5px 5px 15px;
+		margin-bottom: 10px;
+		position: relative;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+		/*overflow: scroll;*/
+	}
+
+	.card .well {
+		margin-top: 5px;
+		margin-bottom: 5px;
+		margin-right: 2px;
+	}
+
+	.card p {
+		padding: 10px 5px 0px 0px;
+	}
+
+	.cardtitle {
+		font-size: 1.25em;
+		word-wrap: break-word;
+	}
+
+	.clear {
+		display:table-cell;
+	}
+
+	.root-card {
+		background: #ffffb2;
+		padding: 5px 5px 5px 15px;
+		margin-bottom: 10px;
+		position: relative;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+	}
+
+	.root-card a:hover {
+		color: gray;
+	}
+
+	.searchicons {
+		float:right;
+        margin-left: 5px;
+	}
+
+	.searchclear {
+	    position: absolute;
+	    z-index: 10;
+	    right: 5px;
+	    top: 0;
+	    bottom: 0;
+	    height: 14px;
+	    margin: auto;
+	    cursor: pointer;
+	    color: #ccc;
+	}
+
+	.searchclear:hover {
+		color: gray;
+	}
+
+	.input-group-btn {
+		/*width: 1%;*/
+		position:relative;
+	}
+
+	.input-group {
+		min-width: 50%;
+	}
+
+	.card .well li {
+		list-style-position: outside;
+		text-indent: -1em;
+		padding-left:20px;
+	}
+
+	ul {
+		list-style: none;
+		padding-left: 15px;
+		padding-top: 5px;
+	}
+
+	ul, ol {
+		margin-top: 0;
+		margin-bottom: 0px;
+	}
+	
+	a {
+		color:#0645AD;
+	}
+
+	.gray {
+  		color: #aaa;
+	}
+
+	.gray:hover {
+		color: gray;
+	}
+
+	.gray:visited {
+		color: #aaa;
+	}
+
+	.glyphicons-lg {
+		padding-left: 5px;
+		padding-right: 5px;
+		font-size: 1.25em;
+	}
+
+	.jumbotron {
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+		background: #fff;
+	}
+
+	html, body {
+	  height: 100%;
+	}
+	.page-wrap {
+	  min-height: 100%;
+	  /* equal to footer height */
+	  margin-bottom: -40px; 
+	}
+	.page-wrap:after {
+	  content: "";
+	  display: block;
+	}
+	.site-footer, .page-wrap:after {
+	  /* .push must be the same height as footer */
+	  height: 40px; 
+	}
+	.site-footer {
+		border-top: 1px solid #dddddd;
+		background-color: white;
+		padding-top: 10px;
+	}
+
+	footer a {
+		display: inline-block;
+		padding-right: 5px;
+	}
+
+	footer a:visited {
+		color: #b3b3b3;
+	}
+
+	footer a:hover {
+		color: gray;
+	}
+
+	.label-default {
+		background: #fff;
+	}
+
+	.label {
+		margin: 2px;
+	}
+
+	.information {
+		padding-bottom: 0px;
+
+		cursor: pointer;
+	}
+
+	.information a {
+		display: inline-block;
+		padding-bottom: 5px;
+	}
+
+	.information a:hover{
+		text-decoration:none;
+	}
+
+	.information .label-default:hover {
+		background: #f1f1f1;
+	}
+
+	.categories {
+		padding-bottom: 0px;
+
+	}
+
+	.categories a {
+		display: inline-block;
+		padding-bottom: 5px;
+	}
+
+	.categories a:hover{
+		text-decoration:none;
+	}
+
+	.categories .label-default:hover {
+		background: #f1f1f1;
+	}
+
+	.navbar {
+		margin-bottom: 10px;
+	}
+
+	.jumbotron {
+		margin-bottom: 15px;
+	}
+	
+	.ui-autocomplete {
+	    max-height: 250px;
+	    overflow-y: auto;
+	    /* prevent horizontal scrollbar */
+	    overflow-x: hidden;
+	    /* add padding for vertical scrollbar */
+	    /* padding-right: 5px; */
+	}
+
+	.ui-menu .ui-menu-item a{
+		border:0;
+		border-radius:0;
+	}
+
+	.ui-menu .ui-autocomplete .ui-menu-item a:hover{
+		border:0;
+		border-radius:0;
+		background-color:black;
+	}
+
+  	.navbar-collapse:before, .navbar-collapse:after{
+  		display:inline; content:"";
+  	}
+
+  	.navbar-form {
+  		margin-top:10px;
+  		margin-bottom:0px;
+  	}
+
+  	.navbar-brand {
+  		line-height: inherit;
+  	}
+
+	.navbar-collapse.in {
+		overflow-y: visible;
+	}
+
+/* Twitter-Typeahead */
+
+	.twitter-typeahead {
+	     width: 100%;
+	     position: relative;
+	     top: 3px;
+
+	     font-size: 1.10em;
+ 	}
+ 	.typeahead, .tt-input {
+ 		width: 100% !important;
+ 	}
+ 	.tt-hint {
+ 		color: #aaa;
+ 	}
+	.tt-dropdown-menu {
+		position: absolute;
+		top: 100%;
+		left : 0px;
+		z-index: 100;
+		right : auto;
+		
+	    width: 100%;
+	    min-width: 160px;
+	    margin-top: 50px;
+	    padding: 5px 0;
+	    background-color: #fff;
+	    border: 1px solid #ccc;
+	    border: 1px solid rgba(0, 0, 0, 0.2);
+	    *border-right-width: 2px;
+	    *border-bottom-width: 2px;
+	    -webkit-border-radius: 6px;
+	    -moz-border-radius: 6px;
+	    border-radius: 6px;
+	    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	    -webkit-background-clip: padding-box;
+	    -moz-background-clip: padding;
+	    background-clip: padding-box;
+	    /* max-height:150px; */
+	    overflow-y: auto;
+	}
+	.tt-suggestion {
+	    display: block;
+	    padding: 3px 20px;
+	}
+	.twitter-typeahead .tt-suggestion.tt-cursor {
+	    color: black;
+	    background-color: #f1f1f1;
+	}
+	.tt-suggestion.tt-cursor a {
+	    color: #fff;
+	}
+	.tt-suggestion p {
+	    margin: 0;
+	}
+
+	iframe {
+		height: 450px;
+	}
+
+  	.node circle {
+	    fill: #4582ec;
+	    stroke: #4582ec;
+	    stroke-width: 2px;
+  	}
+	 
+  	.node {
+	  	cursor:pointer;
+  	}
+
+  	.node text { font: 12px sans-serif; }
+	 
+	.link {
+	    fill: none;
+	    stroke: #ccc;
+	    stroke-width: 2px;
+  	}
+
+  	svg {
+  		overflow: scroll;
+  	}
+
+@media (max-width: 767px) {
+	.navbar-brand {
+	    position: absolute;
+	    width: 100%;
+	    left: 0;
+	    text-align: center;
+	    margin: 0 auto;
+	}
+}
+
+@media only screen 
+and (max-device-width : 320px) 
+and (orientation : portrait) {
+
+	h1, .h1 {
+		font-family: "Raleway";
+		font-size:2em;
+	}
+}
+
+
+.suggestions{
+	border:solid 1px #dedede;
+	position:absolute;
+	width: 100%;
+	background: white;
+}
+
+.suggestions ul{
+	padding: 0px;
+	margin-top: 5px;
+}
+
+/*.container{
+	width:600px;
+	margin-left:10px;
+	margin-top:10px;
+}*/
+.suggestions ul li{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.suggestions ul li a{
+	padding:5px;
+	display: block;
+	text-decoration: none;
+	color:#7E7E7E;
+}
+
+.suggestions ul li a:hover{
+	background-color: #f1f1f1;
+}

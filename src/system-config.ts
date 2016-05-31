@@ -25,11 +25,13 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
-
+  
   // App specific barrels.
   'app',
   'app/shared',
   /** @cli-barrel */
+  
+  
 ];
 
 const cliSystemConfigPackages: any = {};

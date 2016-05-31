@@ -1,0 +1,74 @@
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" style="z-index:1;" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                    <span class="sr-only">Toggle search</span>
+                    <span class="glyphicon glyphicon-search text-muted"></span>
+                  </button>
+
+                <button type="button" class="navbar-toggle collapsed pull-left" style="margin-left: 15px; z-index:1;" data-toggle="collapse"
+                    data-target=".navbar-links-collapse">
+                    <span class="sr-only">Toggle Navigation</span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                  </button>
+
+                <a class="navbar-brand" href="index.html"><b>MED·Y·MOL·O·GY</b></a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-links-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <li><a href="apps.html" style="padding-top:10px;">Apps</a></li>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-links-collapse">
+                <div class="nav navbar-nav navbar-right">
+                    <li><a href="about.html" style="padding-top:10px;">About</a></li>
+                </div>
+            </div>
+
+            <div class="navbar-collapse navbar-inverse-collapse collapse in">
+                <form action="search.php" id="searchForm" method="GET" class="navbar-form">
+                    <div class="input-group">
+                        <div style="position:relative;">
+                            <input type="text" [(ngModel)]="word" spellcheck="false" name="search" placeholder="Search for terms..." class="form-control typeahead searchinput"
+                                id="searchquery" (keyup)=filter() required/>
+                             <span class="tt-dropdown-menu" *ngIf="filteredList.length > 0">
+                            <div class="tt-dataset-autocomplete">
+                                <ul *ngFor="let item of filteredList">
+                                    <li>
+                                        <a (click)="select(item)">{{item}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </span>
+                        </div>
+
+                        <!--<div class="suggestions" *ngIf="filteredList.length > 0">
+                            <ul *ngFor="let item of filteredList">
+                                <li>
+                                    <a (click)="select(item)">{{item}}</a>
+                                </li>
+                            </ul>
+                        </div>-->
+                       
+                        <div class="input-group-btn" style="position:relative;">
+                            <button class="btn btn-primary" (click)="onSearch(word)">
+                              <span class="glyphicon glyphicon-search"></span>
+                           </button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</nav>
