@@ -276,13 +276,13 @@
  	}
 	.tt-dropdown-menu {
 		position: absolute;
-		top: 100%;
+		top: 5%;
 		left : 0px;
 		z-index: 100;
 		right : auto;
 		
 	    width: 100%;
-	    min-width: 160px;
+	    /*min-width: 160px;*/
 	    margin-top: 50px;
 	    padding: 5px 0;
 	    background-color: #fff;

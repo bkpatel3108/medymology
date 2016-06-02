@@ -11,6 +11,7 @@ export class Term {
     termId : number;
     termName : string;
     termDefinition : string;
+    termInformation : string;
     termHistory : string;
     category : string;
     roots : Root[]    
