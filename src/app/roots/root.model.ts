@@ -2,7 +2,8 @@
  * Root
  */
 export class Root {
-    constructor(parameters) {
+    
+    constructor() {
         
     }
     

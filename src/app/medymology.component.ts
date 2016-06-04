@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TermsComponent  } from './terms/terms.component'; 
 import { HeaderComponent } from './header/header.component';
-import { AddTermComponent } from './addterm/addterm.component';
+import { AddWordComponent } from './addword/addword.component';
 import { Term } from './terms/term.model';
 
 @Component({
@@ -9,19 +9,19 @@ import { Term } from './terms/term.model';
   selector: 'medymology-app',
   templateUrl: 'medymology.component.html',
   styleUrls: ['medymology.component.css'],
-  directives : [TermsComponent,HeaderComponent,AddTermComponent]
+  directives : [TermsComponent,HeaderComponent,AddWordComponent]
 })
 
 export class MedymologyAppComponent {
     sharedTerms : Term[];
-    newTerm : String;
+    newWord : String;
     ngOnInit() {
           this.sharedTerms = [];
     }
     
-    onNewTerm(newTerm : String)
+    onNewWord(newWord : String)
     {
-      this.newTerm = newTerm;
-      console.log("MedymologyAppComponent-->"+this.newTerm);
+      this.newWord = newWord;
+      console.log("MedymologyAppComponent-->"+this.newWord);
     }
 }

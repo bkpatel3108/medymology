@@ -1,10 +1,11 @@
-    <div class="row">
-        <div class="col-md-10 col-lg-8">
-            <div class="card" *ngFor="let term of terms" (click)="onSelect(term)" [class.selected]="term===selectedTerm">
-                <b class="cardtitle">{{term.termName}}</b>
-                <p>{{term.termDefinition}}</p>
-                <my-app-roots [term]="term">
-                </my-app-roots>
-            </div>
+<div class="row">
+    <div class="col-md-10 col-lg-8">
+        <!--<div class="card" *ngFor="let term of terms" (click)="onSelect(term)" [class.selected]="term===selectedTerm">-->
+        <div class="card" *ngFor="let term of terms" (click)="onSelect(term)">
+            <b class="cardtitle">{{term.termName}}</b>
+            <p>{{term.termDefinition}}</p>
+            <my-app-roots [term]="term">
+            </my-app-roots>
         </div>
     </div>
+</div>

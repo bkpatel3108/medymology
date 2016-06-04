@@ -1,16 +1,16 @@
-<div class="row" *ngIf="newTerm != null">
+<!--<div class="row" *ngIf="newTerm != null">
     <div class="col-md-10 col-lg-8">
         <div class="card">
             There were no terms matching your search.
             <div (click)="expandNewTerm = !expandNewTerm"><a href="#">Add New Term : {{newTerm}}</a></div>
-            <div *ngIf="expandNewTerm">
+            <div *ngIf="expandNewTerm">-->
                 <form class="form-horizontal" [ngFormModel]="editForm" (ngSubmit)="saveNewTerm()">
                     <fieldset>
                         <div class="form-group" [ngClass]="{'has-error': termNameControl.touched && !termNameControl.valid}">
                             <label class="col-md-2 control-label" for="termName ">Term Name</label>
                             <div class="col-md-8">
                                 <input class="form-control" id="termName" type="text" placeholder="Term Name (required)" [(ngModel)]="term.termName" ngControl="termName"
-                                />
+                                    value="{{newTerm}}" />
                                 <span class="help-block" *ngIf="formError.termName">{{formError.termName}}</span>
                             </div>
                         </div>
@@ -23,14 +23,16 @@
                         <div class="form-group" [ngClass]="{ 'has-error': termDefinitionControl.touched && !termDefinitionControl.valid}">
                             <label class="col-md-2 control-label" for="termDefinition">Term Definition</label>
                             <div class="col-md-8 ">
-                                <textarea class="form-control" placeholder="Term definition (required)" class="form-control" [(ngModel)]="term.termDefinition" ngControl="termDefinition"></textarea>
+                                <textarea class="form-control" placeholder="Term definition (required)" class="form-control" [(ngModel)]="term.termDefinition"
+                                    ngControl="termDefinition"></textarea>
                                 <span class="help-block" *ngIf="formError.termDefinition">{{formError.termDefinition}}</span>
                             </div>
                         </div>
                         <div class="form-group" [ngClass]="{ 'has-error': termInformationControl.touched && !termInformationControl.valid}">
                             <label class="col-md-2 control-label" for="termInformation">Term Information</label>
                             <div class="col-md-8 ">
-                                <textarea class="form-control" placeholder="Term Information (required)" class="form-control" [(ngModel)]="term.termInformation" ngControl="termInformation"></textarea>
+                                <textarea class="form-control" placeholder="Term Information (required)" class="form-control" [(ngModel)]="term.termInformation"
+                                    ngControl="termInformation"></textarea>
                                 <span class="help-block" *ngIf="formError.termInformation">{{formError.termInformation}}</span>
                             </div>
                         </div>
@@ -65,7 +67,6 @@
                                 <li *ngFor="let item of newTermRoots" class="list-group-item">{{item}}<button (click)="removeNewTermRoot(item)" class="remove-item btn btn-default btn-xs pull-right"><span class="glyphicon glyphicon-remove"></span></button></li>
                             </ul>
                         </div>
-
                         <div class="form-group">
                             <div class="col-md-4 col-md-offset-4">
                                 <button type="submit" class="btn btn-default center-block" [disabled]="!editForm.valid">
@@ -74,7 +75,7 @@
                         </div>
                     </fieldset>
                 </form>
-            </div>
+            <!--</div>
         </div>
     </div>
-</div>
+</div>-->

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { FormBuilder, ControlGroup, Control, Validators } from '@angular/common';
 import { Term } from '../terms/term.model';
+import { RootService } from '../roots/root.service';
 
 @Component({
     moduleId: module.id,
@@ -8,16 +9,18 @@ import { Term } from '../terms/term.model';
     host: {
         '(document:click)': 'handleClick($event)',
     },
-    templateUrl: 'addterm.component.html'
+    templateUrl: 'addterm.component.html',
+    providers: [RootService]
+
 })
 export class AddTermComponent implements OnInit {
     @Input() newTerm: String;
     @Input() rootName: String;
 
-    roots: String[];
+    roots: String[] = [];
     newTermRoots: String[];
     filteredList: String[] = [];
-    expandNewTerm: boolean;
+    //expandNewTerm: boolean;
     expandAddRoots: boolean;
     public elementRef: ElementRef;
 
@@ -29,7 +32,7 @@ export class AddTermComponent implements OnInit {
     termDefinitionControl: Control;
     termInformationControl: Control;
 
-    constructor(myElement: ElementRef, private _fb: FormBuilder) {
+    constructor(myElement: ElementRef, private _fb: FormBuilder, private rootService: RootService) {
         this.elementRef = myElement;
 
         this.formError = {
@@ -60,18 +63,32 @@ export class AddTermComponent implements OnInit {
     ngOnInit() {
         //this.newTerm = '';
         this.newTermRoots = [];
-        this.roots = ["aazz", "bbyy", "ccxx", "ddww"];
+        //this.roots = ["aazz", "bbyy", "ccxx", "ddww"];
+        this.rootService.getRoots("temp")
+            .subscribe(roots => {
+                //this.terms = terms.data.terms
+                console.log("roots-->" + roots);
+
+                if (roots.data.roots) {
+
+                    for (var root of roots.data.roots) {
+                        console.log("roots-->" + root.rootName);
+                        this.roots.push(root.rootName);
+                        console.log("roots-->" + this.roots);
+                    }
+                }
+            });;
 
         this.term = new Term();
 
         this.termNameControl = new Control(this.term.termName, Validators.compose([Validators.required,
             Validators.minLength(3),
             Validators.maxLength(50)]));
-        
+
         this.termDefinitionControl = new Control(this.term.termDefinition, Validators.compose([Validators.required,
             Validators.minLength(3),
             Validators.maxLength(50)]));
-            
+
         this.termInformationControl = new Control(this.term.termInformation, Validators.compose([Validators.required,
             Validators.minLength(3),
             Validators.maxLength(50)]));
@@ -86,6 +103,7 @@ export class AddTermComponent implements OnInit {
 
         this.editForm.valueChanges.subscribe(data => this.onValueChanged(data));
         // th
+        console.log("roots-->" + this.roots);
 
     }
 

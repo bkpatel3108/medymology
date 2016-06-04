@@ -16,10 +16,9 @@ import { TermRootListService } from './term-root-list.service';
 
 export class HeaderComponent implements OnInit {
     @Input() word: String;
-    @Input() newTerm: String;
     @Input() terms: Term[];
     
-    @Output() onNewTerm = new EventEmitter<String>();
+    @Output() onNewWord = new EventEmitter<String>();
 
     words: String[] = [];
     //terms: Term[];
@@ -56,9 +55,8 @@ export class HeaderComponent implements OnInit {
                     }
                 }
                 else{
-                    console.log("newTerm-->" + this.newTerm);
-                    this.onNewTerm.emit(word);
-                    console.log("newTerm-->" + this.newTerm);
+                    console.log("newWord-->" + word);
+                    this.onNewWord.emit(word);
                 }
             });
         // this.term = new Term();
