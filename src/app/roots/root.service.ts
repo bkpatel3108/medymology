@@ -13,7 +13,7 @@ export class RootService {
         //   {'id' : 12, 'name' : 'Dev' },
         //   {'id' : 13, 'name' : 'Manu' }            
         // ];
-        return this.http.get('http://localhost:8888/MedymologyRestServices/searchRoot.php?word='+word)
+        return this.http.get('http://localhost:8888/php-rest-services/searchRoot.php?word='+word)
             .map((res: Response) => res.json());
     }
 }

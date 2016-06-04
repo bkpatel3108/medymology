@@ -13,7 +13,7 @@ export class TermRootListService {
         //   {'id' : 12, 'name' : 'Dev' },
         //   {'id' : 13, 'name' : 'Manu' }            
         // ];
-        return this.http.get('http://localhost:8888/MedymologyRestServices/autocomplete.php')
+        return this.http.get('http://localhost:8888/php-rest-services/autocomplete.php')
             .map((res: Response) => res.json());
     }
 }
