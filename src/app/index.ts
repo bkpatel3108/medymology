@@ -1,2 +1,2 @@
 export * from './environment';
-export * from './medymology.component';
+export * from './app.component';

@@ -2,8 +2,8 @@
     <div class="col-md-10 col-lg-8">
         <div class="card">
             There are no terms/roots matching your search.
-            <div (click)="expandNewTerm = !expandNewTerm; expandNewRoot = false"><a href="#">Add New Term : {{newWord}}</a></div>
-            <div (click)="expandNewRoot = !expandNewRoot; expandNewTerm = false"><a href="#">Add New Root : {{newWord}}</a></div>
+            <div (click)="checkCredentials(); expandNewTerm = !expandNewTerm; expandNewRoot = false"><a href="#">Add New Term : {{newWord}}</a></div>
+            <div (click)="checkCredentials(); expandNewRoot = !expandNewRoot; expandNewTerm = false"><a href="#">Add New Root : {{newWord}}</a></div>
             <div *ngIf="expandNewTerm && !expandNewRoot">
                 <my-app-newterm [newTerm]="newWord"></my-app-newterm>
             </div>
