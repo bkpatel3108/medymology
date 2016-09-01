@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import { FormBuilder, ControlGroup, Control, Validators } from '@angular/common';
 import { Term } from '../terms/term.model';
 import { RootService } from '../roots/root.service';
+import { AddTermService } from './addterm.service';
 
 @Component({
     moduleId: module.id,
@@ -10,7 +11,7 @@ import { RootService } from '../roots/root.service';
         '(document:click)': 'handleClick($event)',
     },
     templateUrl: 'addterm.component.html',
-    providers: [RootService]
+    providers: [RootService,AddTermService]
 
 })
 export class AddTermComponent implements OnInit {
@@ -32,7 +33,7 @@ export class AddTermComponent implements OnInit {
     termDefinitionControl: Control;
     termInformationControl: Control;
 
-    constructor(myElement: ElementRef, private _fb: FormBuilder, private rootService: RootService) {
+    constructor(myElement: ElementRef, private _fb: FormBuilder, private rootService: RootService, private addTermService : AddTermService) {
         this.elementRef = myElement;
 
         this.formError = {
@@ -128,6 +129,7 @@ export class AddTermComponent implements OnInit {
         if (this.editForm.dirty && this.editForm.valid) {
             this.term = this.editForm.value;
             alert(`Movie: ${JSON.stringify(this.term)}`);
+            this.addTermService.addTerm(this.editForm.value);
         }
     }
 
